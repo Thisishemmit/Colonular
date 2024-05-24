@@ -31,3 +31,5 @@ shape = SubResource("WorldBoundaryShape2D_3hgym")
 position = Vector2(66, 0)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_3hgym")
+
+[node name="left_btn" type="TouchScreenButton" parent="."]
