@@ -19,6 +19,24 @@ position = Vector2(-1, 0)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(7, 7)
 
+[node name="left_btn" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-66, 20)
+texture_normal = ExtResource("2_rl47j")
+texture_pressed = ExtResource("3_d5r7m")
+action = "ui_left"
+
+[node name="right_btn" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-40, 20)
+texture_normal = ExtResource("4_ehpb0")
+texture_pressed = ExtResource("5_xy6ok")
+action = "ui_right"
+
+[node name="up_btn" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(53, 21)
+texture_normal = ExtResource("6_xuxqo")
+texture_pressed = ExtResource("7_3qehd")
+action = "ui_up"
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -37,18 +55,3 @@ shape = SubResource("WorldBoundaryShape2D_3hgym")
 position = Vector2(66, 0)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_3hgym")
-
-[node name="left_btn" type="TouchScreenButton" parent="."]
-position = Vector2(-66, 20)
-texture_normal = ExtResource("2_rl47j")
-texture_pressed = ExtResource("3_d5r7m")
-
-[node name="right_btn" type="TouchScreenButton" parent="."]
-position = Vector2(-40, 20)
-texture_normal = ExtResource("4_ehpb0")
-texture_pressed = ExtResource("5_xy6ok")
-
-[node name="up_btn" type="TouchScreenButton" parent="."]
-position = Vector2(53, 21)
-texture_normal = ExtResource("6_xuxqo")
-texture_pressed = ExtResource("7_3qehd")
