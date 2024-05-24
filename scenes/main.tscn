@@ -20,18 +20,6 @@ position = Vector2(-1, 0)
 zoom = Vector2(7, 7)
 position_smoothing_enabled = true
 
-[node name="right_btn" type="TouchScreenButton" parent="Camera2D"]
-position = Vector2(-40, 20)
-texture_normal = ExtResource("4_ehpb0")
-texture_pressed = ExtResource("5_xy6ok")
-action = "ui_right"
-
-[node name="up_btn" type="TouchScreenButton" parent="Camera2D"]
-position = Vector2(53, 21)
-texture_normal = ExtResource("6_xuxqo")
-texture_pressed = ExtResource("7_3qehd")
-action = "ui_up"
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -54,15 +42,44 @@ shape = SubResource("WorldBoundaryShape2D_3hgym")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.938
+anchor_right = 0.035
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
+offset_top = -65.824
+offset_right = 288.68
 grow_vertical = 0
 
+[node name="right_btn" type="TouchScreenButton" parent="CanvasLayer/HBoxContainer"]
+position = Vector2(266, -45)
+scale = Vector2(7, 7)
+texture_normal = ExtResource("4_ehpb0")
+texture_pressed = ExtResource("5_xy6ok")
+action = "ui_right"
+
 [node name="left_btn" type="TouchScreenButton" parent="CanvasLayer/HBoxContainer"]
-position = Vector2(-66, -588)
+position = Vector2(86, -45)
+scale = Vector2(7, 7)
 texture_normal = ExtResource("2_rl47j")
 texture_pressed = ExtResource("3_d5r7m")
 action = "ui_left"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.916
+anchor_top = 0.88
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -191.232
+offset_top = -25.24
+offset_right = -2.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="up_btn" type="TouchScreenButton" parent="CanvasLayer/HBoxContainer2"]
+position = Vector2(94, -45)
+scale = Vector2(7, 7)
+texture_normal = ExtResource("6_xuxqo")
+texture_pressed = ExtResource("7_3qehd")
+action = "ui_up"
